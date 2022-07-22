@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h1-test,.link-test{
+            /* 크기조정 불가능 */
+            border : 10px solid blue;
+        }
+        .link-test{
+            /* display로 상태를  inline-block으로 변경 가능하다. */
+            display : inline-block;
+            height: 100px;
+        }
+        .h1-test{
+            /* 한 줄 전체를 차지한다.(브라우저 기준) */
+            width: 100px;
+            display: none;
+            /* display : none은 버튼을 눌러야만 보여주는 그런 상황 
+            태그가 사라진 건 아닌데 css로 감춰진 것이다.*/
+            /* 크기변경이 가능하다. */
+        }
+        button{
+            width : 100%;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 인라인 블록은 내용물 크기가 정해져 있다.
+        크기변경 블가능
+        따라서 마진 패딩 설정이 안된다.
+        a태그가 대표적
+
+         -->
+    <!-- 블락은 한줄 전체를 차지한다.
+         크기변경 가능
+         h1 태그가 대표적 -->
+    <a class ='link-test' href="">ffffff</a>
+    <a class ='link-test' href="">ffffff</a>
+
+    <h1 class="h1-test">랄랄라</h1>
+    <h1 class="h1-test">호호호</h1>
+    <!-- inline-block 성질을 둘 다 가지고 있다.
+        정해진 크기를 가지고 있으며
+        크기를 조정할 수 있다.
+        button이 대표적 -->
+    <button>나를 클릭해</button>
+</body>
+</html>

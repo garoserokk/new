@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .grand-parent,
+    .parent,
+    .child{
+      border : 1px solid black;
+      /* static은 움직일 수 없다 : default값 */
+      /* position: static; */
+    }
+    .child{
+      /* position : absolute에 값을 넣어주면
+      static이 아니면 부모가 기준이다. 
+      static이면 웹이 기준이다.*/
+      position: absolute;
+      /* left에 공백을 100px넣으라는 뜻
+         부모를 기준으로 상대적으로 움직인다. */
+      top:0px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grand-parent">
+    할배
+    <div class="parent">
+      아빠
+      <div class="child">나</div>
+    </div>
+  </div>
+</body>
+</html>

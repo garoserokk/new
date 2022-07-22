@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 1200px;
+      }
+      .container {
+        display: flex;
+        position: fixed;
+        /* 포지션은 부모와 관련이 있다. */
+        width: 98%;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid black;
+      }
+      .menu-wrapper {
+        display: flex;
+      }
+      .menu {
+        width: 120px;
+        height: 30px;
+        border: 1px solid black;
+      }
+
+      .signup-wrapper {
+        display: flex;
+      }
+      .signup-wrapper div {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu-wrapper">
+        <div class="menu">메뉴1</div>
+        <div class="menu">메뉴2</div>
+        <div class="menu">메뉴3</div>
+      </div>
+      <h1>logo</h1>
+      <div class="signup-wrapper">
+        <div>회원가입</div>
+        <div>로그인</div>
+      </div>
+    </div>
+    <main>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- type input에 대한 타입을 명시 -->
+    <!-- type ='text' 기본값, 텍스트가 표시된다. -->
+    <input type="text" value='치킨'>
+    <br>
+    <!-- value는 기본값으로 들어가고 값을 넣어주지 않으면 빈칸으로  -->
+    <!-- type ='password' text를 암호화해서 보여준다. -->
+    <!-- placeholder는 무엇을 입력해야 하는지 안내문구를 넣을 때 사용 -->
+    <input type="password" placeholder="비밀번호를 입력하세요">
+    <br>
+    <br>
+    <!-- type ='radio'
+    한가지만 선택 가능한 버튼
+    한가지만 선택하기 위해 해당 input을 묶어주는 작업이 필요하다.
+    input을 묶어줄 때 사용하는 속성 name
+    name이 같은 경우 묶인다.
+    checked는 기본값으로 체크되도록 설정 -->
+    자바반: <input name ='class' type="radio">
+    파이썬반: <input name ='class' type="radio">
+    임베디드반: <input name ='class' type="radio" checked>
+    <br><br>
+
+    <!-- type ='checkbox' 다중선택 가능 박스 -->
+    치킨<input type="checkbox" name='food' id='' checked>
+    삼겹살<input type="checkbox" name='food' id='' checked>
+    마라탕<input type="checkbox" name='food' id=''>
+    <br><br>
+    <!-- type ='submit' 보통 서버에 제출하기 위한 제출 버튼 
+    value 기본값 제출-->
+    <input type="submit" value='로그인하기'>
+
+    <!-- type= 'button' 일반 버튼의 역할 value 기본값=''
+    기능을 부여할때 사용-->
+    <input type="button" value ='버튼입니다.'>
+    
+</body>
+</html>

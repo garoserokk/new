@@ -1,0 +1,57 @@
+<!-- flex의 기본은 정렬 -->
+<!-- grid의 목적은 레이아웃 -->
+<!-- 부모가 flex여야 하고 자식이 item -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            display : flex;
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            flex-direction: row;
+            /* flex-direction : default 값이 row이다. */
+            background-color: black;
+            height: 300px;
+            /* align-items: center; */
+            align-items: center;
+            /* flex-end,stretch,baseline */
+            /* justify-content: space-between; */
+            /* 기본값은 flex-start , space-around는 적절한 간격을 띄워준다.
+                아예 붙여버리고 싶으면 space-between*/
+            /* 양이 많을때 크기가 작아지는게 싫으면 쓰는 것 flex-wrap :wrap */
+            /* flex-wrap: wrap; */
+        }
+        .box{
+            width: 80px;
+            height: 80px;
+            border:  1px solid blue;
+        }
+        .a{
+            /* flex : 1,2,3 주어진 것은 비율을 의미한다. */
+            flex:1;
+            background-color: red;
+        }
+        .b{
+            flex:3;
+            background-color: green;
+        }
+        .c{
+            flex:2;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box a"></div>
+        <div class="box b"></div>
+        <div class="box c"></div>
+
+    </div>
+</body>
+</html>
