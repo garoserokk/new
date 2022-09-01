@@ -4,7 +4,7 @@ const pool = mysql.createPool({
     host :"43.200.206.77",
     //port:3306이 생략되어있다.
     user : 'hun',
-    password :"woadjqtdj1!",
+    password :"",
     database :'jony',
     waitForConnections:true,
     connectionLimit:10,
