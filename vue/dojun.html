@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ message}}</h1>
+      <button v-on:click="bbq">클릭</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10/dist/vue.min.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data() {
+          return {
+            message: "클릭을 눌러주세요.",
+            nextMessage: "하하",
+          };
+        },
+        methods: {
+          bbq() {
+            this.message = this.nextMessage;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
