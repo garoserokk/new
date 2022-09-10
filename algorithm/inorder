@@ -1,0 +1,77 @@
+#include <iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int N;
+vector<int>v[1001];
+vector<int>pre;
+vector<int>last;
+
+void dfs3(int now) {
+
+	if (now < 0)return;
+
+	dfs3(v[now][0]);
+
+	cout << now << " ";
+
+	dfs3(v[now][1]);
+
+}
+void dfs2(int now) {
+	//3번패턴
+	for (int i = 0; i <v[now].size(); i++) {
+		if (v[now][i] == -1)continue;
+		int next = v[now][i];
+		dfs2(next);
+		last.push_back(next);
+	}
+
+}
+void dfs(int now) {
+	//2번패턴
+	pre.push_back(now);
+	for (int i = 0; i < v[now].size(); i++) {
+		if (v[now][i] == -1)continue;
+		int next = v[now][i];
+		dfs(next);
+	}
+
+}
+int main() {
+
+	freopen_s(new FILE*, "input.txt", "r", stdin);
+	ios_base::sync_with_stdio(false);
+	cin.tie();
+	cout.tie();
+	//1번은 중위 순회
+
+	//2번은 전위 순회
+
+	//3번은 후위 순회
+	cin >> N;
+
+	for (int i = 0; i < N; i++) {
+		int root, left, right;
+		cin >> root >> left >> right;
+
+		v[root].push_back(left);
+		v[root].push_back(right);
+	}
+	dfs(1);
+	dfs2(1);
+	dfs3(1);
+	cout << "\n";
+
+	last.push_back(1);
+	for (int i = 0; i < pre.size(); i++) {
+		cout << pre[i] << " ";
+	}
+
+	cout << "\n";
+
+	for (int i = 0; i < last.size(); i++){
+		cout << last[i] << " ";
+	}
+
+}
